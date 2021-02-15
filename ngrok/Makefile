@@ -63,7 +63,7 @@ configure:
 	echo not cp -f Makefile.openssl Makefile ; \
 	export CFLAGS="$(CFLAGS)" ; \
 	export LDFLAGS="$(LDFLAGS)" ; \
-	../fix.sh ; \
+	sh ../fix.sh ; \
 	)
 
 clean:
