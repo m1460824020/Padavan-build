@@ -41,7 +41,7 @@ jobs:
           sed -i 's/busybox/busybox\ndir_$(CONFIG_FIRMWARE_INCLUDE_NGROK)            += ngrok/' /opt/rt-n56u/trunk/user/Makefile
           sed -i 's/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=y/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n/g' /opt/rt-n56u/trunkconfigs/templates/$TNAME.config
           sed -i 's/CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y/CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n/g' /opt/rt-n56u/trunkconfigs/templates/$TNAME.config
-          echo '' >> /opt/rt-n56u/trunkconfigs/templates/$TNAME.config
+          echo '' >> /opt/rt-n56u/trunk/configs/templates/$TNAME.config
           echo 'CONFIG_FIRMWARE_INCLUDE_NGROK=y' >> /opt/rt-n56u/trunkconfigs/templates/$TNAME.config
           cd /opt/rt-n56u/trunk
           #sudo ./clear_tree_simple
