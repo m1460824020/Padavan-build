@@ -59,8 +59,7 @@ config_test:
 
 configure:
 	( cd $(SRC_NAME) ; \
-	cp -f Makefile.openssl.static Makefile ; \
-	echo not cp -f Makefile.openssl Makefile ; \
+	cp -f Makefile.openssl Makefile ; \
 	export CFLAGS="$(CFLAGS)" ; \
 	export LDFLAGS="$(LDFLAGS)" ; \
 	bash ../fix.sh ; \
