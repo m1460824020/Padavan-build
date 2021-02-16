@@ -81,7 +81,7 @@ romfs:
 #	tar -xzf ./ngrokc.tar.gz -C $(INSTALLDIR)/usr/bin
 #	chmod 777 $(INSTALLDIR)/usr/bin/ngrokc
 	mkdir -p $(INSTALLDIR)/usr/share/bkye
-	cp -f $(THISDIR)/ngrok.asp $(INSTALLDIR)/www
+	cp -f $(THISDIR)/ngrok.asp $(THISDIR)/../www/n56u_ribbon_fixed/ngrok.asp
 #	tar -xzf ./bkye.tar.gz -C $(INSTALLDIR)/usr/share/bkye
 #	tar -xvzf ./bkye.tar.gz -C $(INSTALLDIR)/lib/
 #	$(ROMFSINST) /lib/libgcc_s.so.1
