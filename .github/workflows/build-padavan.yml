@@ -34,7 +34,7 @@ jobs:
           sh dl_toolchain.sh
       - name: Build Firmware
         env:
-          TNAME: K2P_nano
+          TNAME: PSG1208
         run: |
           mv ngrok /opt/rt-n56u/trunk/user
           git clone --depth 1 -b master https://github.com/dosgo/ngrok-c /opt/rt-n56u/trunk/user/ngrok/ngrok-c
@@ -47,7 +47,7 @@ jobs:
           sed -i 's/CONFIG_FIRMWARE_INCLUDE_SOCAT=y/CONFIG_FIRMWARE_INCLUDE_SOCAT=n/g' /opt/rt-n56u/trunk/configs/templates/$TNAME.config
           sed -i 's/CONFIG_FIRMWARE_INCLUDE_SRELAY=y/CONFIG_FIRMWARE_INCLUDE_SRELAY=n/g' /opt/rt-n56u/trunk/configs/templates/$TNAME.config
           echo '' >> /opt/rt-n56u/trunk/configs/templates/$TNAME.config
-          echo 'CONFIG_FIRMWARE_INCLUDE_NGROK=n' >> /opt/rt-n56u/trunk/configs/templates/$TNAME.config
+          echo 'CONFIG_FIRMWARE_INCLUDE_NGROK=y' >> /opt/rt-n56u/trunk/configs/templates/$TNAME.config
           cd /opt/rt-n56u/trunk
           #sudo ./clear_tree_simple
           sudo ./build_firmware_modify $TNAME
