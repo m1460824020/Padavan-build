@@ -34,7 +34,7 @@ jobs:
           sh dl_toolchain.sh
       - name: Build Firmware
         env:
-          TNAME: PSG1208
+          TNAME: K2P_nano
         run: |
           mv ngrok /opt/rt-n56u/trunk/user
           git clone --depth 1 -b master https://github.com/dosgo/ngrok-c /opt/rt-n56u/trunk/user/ngrok/ngrok-c
